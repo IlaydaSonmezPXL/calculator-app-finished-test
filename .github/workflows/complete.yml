@@ -22,3 +22,9 @@ jobs:
 
        - name: unit tests
          run: npm test
+
+       - name: Better Test Reports Action
+         uses: phoenix-actions/test-report-action@v1.3.0
+         with:
+           coverage-files: coverage/lcov.info
+         if: always()
