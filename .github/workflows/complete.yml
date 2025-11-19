@@ -21,7 +21,7 @@ jobs:
          run: zip -r app_package.zip . -x ".git/*" ".github/*"
 
        - name: unit tests
-         run: npm test
+         run: npm test -- --coverage
 
        - name: Better Test Reports Action
          uses: mridang/action-test-reporter@v1.3.0
