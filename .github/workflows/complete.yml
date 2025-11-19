@@ -24,7 +24,11 @@ jobs:
          run: npm test
 
        - name: Better Test Reports Action
-         uses: phoenix-actions/test-report-action@v1.3.0
+         uses: mridang/action-test-reporter@v1.3.0
          with:
-           coverage-files: coverage/lcov.info
+           github-token: ${{ secrets.GITHUB_TOKEN }}
+           coverage-file: coverage/lcov.info
+           upload-coverage-report: true
          if: always()
+              
+        
